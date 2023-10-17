@@ -22,8 +22,11 @@ return {
       lspconfig.snyk.setup({
         init_options = {
           -- full list of options at https://docs.snyk.io/integrations/ide-tools/language-server#lsp-initialization-options
+          activateSnykOpenSource = "true",
           activateSnykCode = "true",
+          activateSnykIac = "true",
           enableTrustedFoldersFeature = "false", -- Whether or not LS will prompt to trust a folder (default: true)
+          token = "",
         },
       })
     end,
